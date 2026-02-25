@@ -15,12 +15,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -189,5 +192,243 @@ fun TutorialComposeScreen() {
             modifier = Modifier.padding(all = 16.dp),
             textAlign = TextAlign.Justify
         )
+    }
+}
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun PantallaPerfil() {
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFFF5F5F5))
+            .padding(all = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+
+        // Foto de perfil
+        Image(
+            painter = painterResource(id = R.drawable.perfil_foto),
+            contentDescription = "Foto de perfil",
+            modifier = Modifier
+                .width(110.dp)
+                .height(110.dp)
+                .clip(CircleShape),
+            contentScale = ContentScale.Crop
+        )
+
+        // Nombre
+        Text(
+            text = "Helbert Mauricio",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 14.dp),
+            textAlign = TextAlign.Center
+        )
+
+        // Descripción
+        Text(
+            text = "Desarrollador Android apasionado por la\ntecnología y el diseño.",
+            fontSize = 12.sp,
+            color = Color.DarkGray,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 6.dp),
+            textAlign = TextAlign.Center
+        )
+
+        // Métricas
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 18.dp),
+            horizontalArrangement = Arrangement.SpaceAround
+        ) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(text = "150", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                Text(text = "Posts", fontSize = 12.sp, color = Color.Gray)
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(text = "2.3K", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                Text(text = "Seguidores", fontSize = 12.sp, color = Color.Gray)
+            }
+
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(text = "980", fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                Text(text = "Likes", fontSize = 12.sp, color = Color.Gray)
+            }
+        }
+
+        // Botones (simulados con Text)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 18.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = "Seguir",
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .width(150.dp)
+                    .clip(CircleShape)
+                    .background(Color(0xFF6E59B5))
+                    .padding(vertical = 10.dp),
+                textAlign = TextAlign.Center
+            )
+
+            Text(
+                text = "Mensaje",
+                color = Color(0xFF6E59B5),
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier
+                    .width(150.dp)
+                    .clip(CircleShape)
+                    .background(Color(0xFFEDEDED))
+                    .padding(vertical = 10.dp),
+                textAlign = TextAlign.Center
+            )
+        }
+
+        // Título intereses
+        Text(
+            text = "Intereses",
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 24.dp)
+        )
+
+        // Chips fila 1
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 10.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = "Gym",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color(0xFFD9D9D9))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                fontSize = 12.sp
+            )
+            Text(
+                text = "Programación",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color(0xFFD9D9D9))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                fontSize = 12.sp
+            )
+            Text(
+                text = "UI/UX",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color(0xFFD9D9D9))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                fontSize = 12.sp
+            )
+        }
+
+        // Chips fila 2
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 8.dp),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = "Música",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color(0xFFD9D9D9))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                fontSize = 12.sp
+            )
+            Text(
+                text = "Viajes",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color(0xFFD9D9D9))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                fontSize = 12.sp
+            )
+            Text(
+                text = "Gaming",
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .background(Color(0xFFD9D9D9))
+                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                fontSize = 12.sp
+            )
+        }
+
+        // Título proyectos
+        Text(
+            text = "Proyectos Recientes",
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 24.dp)
+        )
+
+        // Tarjeta proyecto (horizontal)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Color(0xFFBDBDBD))
+                .padding(top = 0.dp)
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.perfil_foto),
+                contentDescription = "Proyecto",
+                modifier = Modifier
+                    .width(110.dp)
+                    .height(95.dp),
+                contentScale = ContentScale.Crop
+            )
+
+            Column(
+                modifier = Modifier
+                    .padding(10.dp)
+                    .fillMaxWidth()
+            ) {
+                Text(
+                    text = "App de Facturaciòn",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 14.sp,
+                    color = Color.Black
+                )
+
+                Text(
+                    text = "Aplicaciòn para llevar el control de facturacion e inventario con proveedores",
+                    fontSize = 12.sp,
+                    color = Color.Black,
+                    modifier = Modifier.padding(top = 4.dp)
+                )
+
+                Text(
+                    text = "Ver más",
+                    color = Color.White,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier
+                        .padding(top = 8.dp)
+                        .background(Color(0xFF6E59B5))
+                        .padding(horizontal = 18.dp, vertical = 8.dp),
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
     }
 }
