@@ -139,4 +139,55 @@ fun DetalleProductoBasico() {
         }
     }
 }
+@Preview(showSystemUi = true, showBackground = true)
+@Composable
+fun TutorialComposeScreen() {
 
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+    ) {
+
+        Image(
+            painter = painterResource(id = R.drawable.panel),
+            contentDescription = "Jetpack Compose tutorial",
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(180.dp)   // ajusta si tu guía muestra otra altura visual
+        )
+
+
+        Text(
+            text = "Jetpack Compose tutorial",
+            fontSize = 24.sp,
+            color = Color.Black,
+            modifier = Modifier.padding(all = 16.dp)
+        )
+
+
+        Text(
+            text = "Jetpack Compose is a modern toolkit for building native Android UI. " +
+                    "Compose simplifies and accelerates UI development on Android with less " +
+                    "code, powerful tools, and intuitive Kotlin APIs.",
+            color = Color.DarkGray,
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp),
+            textAlign = TextAlign.Justify
+        )
+
+
+        Text(
+            text = "In this tutorial, you build a simple UI component with declarative functions. " +
+                    "You call Compose functions to say what elements you want and the Compose compiler " +
+                    "does the rest. Compose is built around Composable functions. These functions let " +
+                    "you define your app's UI programmatically because they let you describe how it " +
+                    "should look and provide data dependencies, rather than focus on the process of " +
+                    "the UI's construction, such as initializing an element and then attaching it to " +
+                    "a parent. To create a Composable function, you add the @Composable annotation " +
+                    "to the function name.",
+            color = Color.DarkGray,
+            modifier = Modifier.padding(all = 16.dp),
+            textAlign = TextAlign.Justify
+        )
+    }
+}
