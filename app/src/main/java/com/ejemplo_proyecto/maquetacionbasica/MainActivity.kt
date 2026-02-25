@@ -63,7 +63,7 @@ fun DetalleProductoBasico() {
                 .padding(all = 16.dp)
         ) {
 
-            // Fila superior con "favorito" (sin Box, solo con Row)
+
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End
@@ -78,7 +78,7 @@ fun DetalleProductoBasico() {
                 )
             }
 
-            // Imagen del producto (250.dp alto)
+
             Image(
                 painter = painterResource(id = R.drawable.computador),
                 contentDescription = "Producto",
@@ -87,7 +87,7 @@ fun DetalleProductoBasico() {
                     .height(250.dp)
             )
 
-            // Nombre del producto (22.sp)
+
             Text(
                 text = "Nombre del Producto",
                 fontSize = 22.sp,
@@ -96,7 +96,7 @@ fun DetalleProductoBasico() {
                 modifier = Modifier.padding(top = 16.dp)
             )
 
-            // Precio (28.sp)
+
             Text(
                 text = "$99.99",
                 fontSize = 28.sp,
@@ -104,14 +104,14 @@ fun DetalleProductoBasico() {
                 fontWeight = FontWeight.Bold
             )
 
-            // Descripción (Default)
+
             Text(
                 text = "Descripción del producto con detalles importantes,\ncaracterísticas y beneficios.",
                 color = Color.DarkGray,
                 modifier = Modifier.padding(top = 8.dp)
             )
 
-            // Botones (separación 8.dp)
+
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -157,7 +157,7 @@ fun TutorialComposeScreen() {
             contentDescription = "Jetpack Compose tutorial",
             modifier = Modifier
                 .fillMaxWidth()
-                .height(180.dp)   // ajusta si tu guía muestra otra altura visual
+                .height(180.dp)
         )
 
 
@@ -206,7 +206,7 @@ fun PantallaPerfil() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        // Foto de perfil
+
         Image(
             painter = painterResource(id = R.drawable.perfil_foto),
             contentDescription = "Foto de perfil",
@@ -217,7 +217,7 @@ fun PantallaPerfil() {
             contentScale = ContentScale.Crop
         )
 
-        // Nombre
+
         Text(
             text = "Helbert Mauricio",
             fontSize = 20.sp,
@@ -229,7 +229,7 @@ fun PantallaPerfil() {
             textAlign = TextAlign.Center
         )
 
-        // Descripción
+
         Text(
             text = "Desarrollador Android apasionado por la\ntecnología y el diseño.",
             fontSize = 12.sp,
@@ -240,7 +240,7 @@ fun PantallaPerfil() {
             textAlign = TextAlign.Center
         )
 
-        // Métricas
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -263,7 +263,7 @@ fun PantallaPerfil() {
             }
         }
 
-        // Botones (simulados con Text)
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -295,7 +295,7 @@ fun PantallaPerfil() {
             )
         }
 
-        // Título intereses
+
         Text(
             text = "Intereses",
             fontSize = 16.sp,
@@ -306,7 +306,7 @@ fun PantallaPerfil() {
                 .padding(top = 24.dp)
         )
 
-        // Chips fila 1
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -339,7 +339,7 @@ fun PantallaPerfil() {
             )
         }
 
-        // Chips fila 2
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -372,7 +372,7 @@ fun PantallaPerfil() {
             )
         }
 
-        // Título proyectos
+
         Text(
             text = "Proyectos Recientes",
             fontSize = 16.sp,
@@ -383,7 +383,7 @@ fun PantallaPerfil() {
                 .padding(top = 24.dp)
         )
 
-        // Tarjeta proyecto (horizontal)
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -395,7 +395,7 @@ fun PantallaPerfil() {
                 contentDescription = "Proyecto",
                 modifier = Modifier
                     .width(110.dp)
-                    .height(95.dp),
+                    .height(110.dp),
                 contentScale = ContentScale.Crop
             )
 
